@@ -27,7 +27,7 @@ project "SporkEngine"
 
     includedirs
     {
-        "Spork/spork/vendor/spdlog/include"
+        "Spork/vendor/spdlog/include"
     }
 
     filter "system:windows"
@@ -74,8 +74,8 @@ project "TestBox"
 
     includedirs
     {
-        "Spork/spork/vendor/spdlog/include",
-        "spork/src"
+        "Spork/vendor/spdlog/include",
+        "Spork/src"
     }
     
     links

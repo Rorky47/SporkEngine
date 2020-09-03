@@ -1,7 +1,7 @@
 #pragma once
 
 #include <memory>
-#include "Macros.h"
+#include "Core.h"
 #include "spdlog/spdlog.h"
 
 namespace spork{

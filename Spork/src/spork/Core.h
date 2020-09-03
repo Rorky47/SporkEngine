@@ -1,5 +1,7 @@
 #pragma once
 
+
+
 #ifdef SP_PLATFORM_WINDOWS
 	#ifdef SP_BUILD_DLL
 		#define SPORK_API _declspec(dllexport)
@@ -9,3 +11,5 @@
 #else 
 	#error only windows for now
 #endif // SP_PLATFORM_WINDOWS
+
+#define BIT(x) (1 << x)
