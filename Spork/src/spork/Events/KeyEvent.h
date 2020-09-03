@@ -48,7 +48,7 @@ namespace spork {
 		std::string ToString() const override
 		{
 			std::stringstream ss;
-			ss << "KeyRelea: " << m_KeyCode;
+			ss << "KeyReleased: " << m_KeyCode;
 				return ss.str();
 		}
 
