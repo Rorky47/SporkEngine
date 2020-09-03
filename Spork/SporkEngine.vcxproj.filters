@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="spork">
+      <UniqueIdentifier>{D4535F10-4068-87C1-09EA-2A2175BD83F2}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\Spork.h" />
+    <ClInclude Include="src\spork\Engine.h">
+      <Filter>spork</Filter>
+    </ClInclude>
+    <ClInclude Include="src\spork\EntryPoint.h">
+      <Filter>spork</Filter>
+    </ClInclude>
+    <ClInclude Include="src\spork\Log.h">
+      <Filter>spork</Filter>
+    </ClInclude>
+    <ClInclude Include="src\spork\Macros.h">
+      <Filter>spork</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\spork\Engine.cpp">
+      <Filter>spork</Filter>
+    </ClCompile>
+    <ClCompile Include="src\spork\Log.cpp">
+      <Filter>spork</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

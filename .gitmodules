@@ -1,0 +1,3 @@
+[submodule "Spork/spork/vendor/spdlog"]
+	path = Spork/spork/vendor/spdlog
+	url = https://github.com/gabime/spdlog.git
