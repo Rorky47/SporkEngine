@@ -10,13 +10,12 @@ namespace spork {
 	{
 	public:
 		inline int GetKeyCode() const { return m_KeyCode; }
-
 		EVENT_CLASS_CATEGORY(EventCategoryKeyboard | EventCategoryInput)
 	protected:
 		KeyEvent(int keycode)
 			: m_KeyCode(keycode) {}
 
-		int m_KeyCode:
+		int m_KeyCode;
 	};
 
 	class SPORK_API KeyPressedEvent : public KeyEvent 

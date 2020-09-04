@@ -11,7 +11,7 @@ workspace "Spork"
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
-project "SporkEngine"
+project "Spork"
     location "Spork"
     kind "SharedLib"
     language "C++"
@@ -27,6 +27,7 @@ project "SporkEngine"
 
     includedirs
     {
+
         "Spork/vendor/spdlog/include"
     }
 

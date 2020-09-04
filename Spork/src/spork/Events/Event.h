@@ -14,28 +14,29 @@ namespace spork {
 		None = 0,
 		WindowClose, WindowResize, WindowFocus, WindowLostFocus, WindowMoved,
 		AppTick, AppUpdated, AppRender,
-		Keypressed, KeyReleased,
-		MousebouttonPressed, MouseButtonReleased, MouseMoved, MouseScorlled
+		KeyPressed, KeyReleased,
+		MouseClicked, MouseReleased, MouseMoved, MouseScorlled
 	};
 
-	enum class EventCategory
+	enum EventCategory
 	{
 		None = 0,
-		EventCatagoryApplication = BIT(0),
-		EventCatagoryInput = BIT(1),
-		EventCatagoryKeboard = BIT(2),
-		EventCatagoryMouse = BIT(3),
-		EventCatagoryMouseButton = BIT(4)
+		EventCategoryApplication = BIT(0),
+		EventCategoryInput = BIT(1),
+		EventCategoryKeyboard = BIT(2),
+		EventCategoryMouse = BIT(3),
+		EventCategoryMouseButton = BIT(4)
 	};
 
-#define EVENT_CLASS_TYPE(type) static EventType getStaticType() { return EventType::##type;}\
-								virtual EventType GetStaticType() const override { return GetStaticType(); }\
+#define EVENT_CLASS_TYPE(type) static EventType GetStaticType() { return EventType::type;}\
+								virtual EventType GetEventType() const override { return GetStaticType(); }\
 								virtual const char* GetName() const override { return #type; }
 
 #define EVENT_CLASS_CATEGORY(category) virtual int GetCategoryFlags() const override { return category; }
 	class SPORK_API Event
 	{
 		friend class EventDispatcher;
+		
 	public:
 		//ToString and get name put in debug only mode
 		virtual EventType GetEventType() const = 0;
@@ -43,7 +44,7 @@ namespace spork {
 		virtual int GetCategoryFlags() const = 0;
 		virtual std::string ToString() const { return GetName(); }
 
-		inline bool IsInCatagoryFlags(EventCategory category)
+		inline bool IsInCategoryFlags(EventCategory category)
 		{
 			return GetCategoryFlags() & category;
 		}
@@ -51,10 +52,10 @@ namespace spork {
 		bool m_Handled = false;
 	};
 
-	class EventDispacher
+	class EventDispatcher
 	{
 		template<typename T>
-		using EvenFn = std::function<bool(T&)>;
+		using EventFn = std::function<bool(T&)>;
 	public:
 		EventDispatcher(Event& event)
 			: m_Event(event) {}
@@ -62,7 +63,7 @@ namespace spork {
 		template<typename T>
 		bool dispatch(EventFn<T> func)
 		{
-			if (m_Event.GetEventTyoe() == T::GetStaticType())
+			if (m_Event.GetEventType() == T::GetStaticType())
 			{
 				m_Event.m_Handled = func(*(T*)&M_Event);
 				return true;
@@ -73,5 +74,9 @@ namespace spork {
 		Event& m_Event;
 	};
 
+	inline std::ostream& operator<<(std::ostream os, const Event& e) 
+	{
+		return os << e.ToString();
+	}
 
 }
