@@ -4,7 +4,7 @@
 #include <functional>
 #include <string>
 
-#include "../Core.h"
+#include "spork/Core.h"
 
 
 namespace spork {

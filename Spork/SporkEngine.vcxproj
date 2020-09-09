@@ -79,7 +79,7 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>SP_PLATFORM_WINDOWS;SP_BUILD_DLL;SP_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>vendor\spdlog\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>src;vendor\spdlog\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
@@ -99,7 +99,7 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>SP_PLATFORM_WINDOWS;SP_BUILD_DLL;SP_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>vendor\spdlog\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>src;vendor\spdlog\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -123,7 +123,7 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>SP_PLATFORM_WINDOWS;SP_BUILD_DLL;SP_DIST;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>vendor\spdlog\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>src;vendor\spdlog\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -144,10 +144,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="src\Spork.h" />
+    <ClInclude Include="src\spork\Core.h" />
     <ClInclude Include="src\spork\Engine.h" />
     <ClInclude Include="src\spork\EntryPoint.h" />
+    <ClInclude Include="src\spork\Events\ApplicationEvent.h" />
+    <ClInclude Include="src\spork\Events\Event.h" />
+    <ClInclude Include="src\spork\Events\KeyEvent.h" />
+    <ClInclude Include="src\spork\Events\MouseEvent.h" />
     <ClInclude Include="src\spork\Log.h" />
-    <ClInclude Include="src\spork\Macros.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\spork\Engine.cpp" />

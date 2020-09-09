@@ -4,19 +4,34 @@
     <Filter Include="spork">
       <UniqueIdentifier>{D4535F10-4068-87C1-09EA-2A2175BD83F2}</UniqueIdentifier>
     </Filter>
+    <Filter Include="spork\Events">
+      <UniqueIdentifier>{38E97DD9-244C-0D7E-CDD1-4534B913D900}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Spork.h" />
+    <ClInclude Include="src\spork\Core.h">
+      <Filter>spork</Filter>
+    </ClInclude>
     <ClInclude Include="src\spork\Engine.h">
       <Filter>spork</Filter>
     </ClInclude>
     <ClInclude Include="src\spork\EntryPoint.h">
       <Filter>spork</Filter>
     </ClInclude>
-    <ClInclude Include="src\spork\Log.h">
-      <Filter>spork</Filter>
+    <ClInclude Include="src\spork\Events\ApplicationEvent.h">
+      <Filter>spork\Events</Filter>
     </ClInclude>
-    <ClInclude Include="src\spork\Macros.h">
+    <ClInclude Include="src\spork\Events\Event.h">
+      <Filter>spork\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\spork\Events\KeyEvent.h">
+      <Filter>spork\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\spork\Events\MouseEvent.h">
+      <Filter>spork\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\spork\Log.h">
       <Filter>spork</Filter>
     </ClInclude>
   </ItemGroup>

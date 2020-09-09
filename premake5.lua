@@ -11,7 +11,7 @@ workspace "Spork"
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
-project "Spork"
+project "SporkEngine"
     location "Spork"
     kind "SharedLib"
     language "C++"
@@ -21,14 +21,15 @@ project "Spork"
 
     files
     {
-        "Spork/src/**.h",
-        "Spork/src/**.cpp"
+
+        "%{prj.location}/src/**.h",
+        "%{prj.location}/src/**.cpp"
     }
 
     includedirs
     {
-
-        "Spork/vendor/spdlog/include"
+        "%{prj.location}/src",
+        "%{prj.location}/vendor/spdlog/include"
     }
 
     filter "system:windows"

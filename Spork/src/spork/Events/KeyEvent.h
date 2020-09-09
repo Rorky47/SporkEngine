@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Event.h"
+#include "spork/Events/Event.h"
 
 #include <sstream>
 
