@@ -1,6 +1,6 @@
 #pragma once
+#include "sppch.h"
 
-#include <memory>
 #include "Core.h"
 #include "spdlog/spdlog.h"
 #include "spdlog/fmt/ostr.h"
@@ -32,6 +32,3 @@ namespace spork{
 #define SP_CLIENT_WARN(...)  ::spork::Log::GetClientLogger()->warn(__VA_ARGS__)
 #define SP_CLIENT_ERROR(...) ::spork::Log::GetClientLogger()->error(__VA_ARGS__)
 #define SP_CLIENT_INFO(...)  ::spork::Log::GetClientLogger()->info(__VA_ARGS__)
-
-
-

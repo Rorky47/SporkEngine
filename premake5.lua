@@ -19,6 +19,9 @@ project "SporkEngine"
     targetdir ("bin/" .. outputdir .. "/%{prj.name}")
     objdir ("bin-int/".. outputdir .."/%{prj.name}")
 
+    pchheader "sppch.h"
+    pchsource "Spork/src/sppch.h"
+
     files
     {
 

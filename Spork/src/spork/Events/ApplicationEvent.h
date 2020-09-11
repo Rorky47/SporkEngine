@@ -4,7 +4,6 @@
 
 #include "Event.h"
 
-
 namespace spork 
 {
 	class SPORK_API WindowResizeEvent : public Event
@@ -38,5 +37,4 @@ namespace spork
 		EVENT_CLASS_TYPE(WindowClose)
 		EVENT_CLASS_CATEGORY(EventCategoryApplication)
 	};
-
 }

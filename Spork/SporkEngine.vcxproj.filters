@@ -34,6 +34,9 @@
     <ClInclude Include="src\spork\Log.h">
       <Filter>spork</Filter>
     </ClInclude>
+    <ClInclude Include="src\sppch.h" />
+    <ClInclude Include="src\platform\Windows\WindowsWindow.h" />
+    <ClInclude Include="src\spork\Window.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\spork\Engine.cpp">
@@ -42,5 +45,7 @@
     <ClCompile Include="src\spork\Log.cpp">
       <Filter>spork</Filter>
     </ClCompile>
+    <ClCompile Include="src\sppch.cpp" />
+    <ClCompile Include="src\platform\Windows\WindowsWindow.cpp" />
   </ItemGroup>
 </Project>
